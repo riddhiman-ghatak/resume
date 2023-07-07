@@ -76,6 +76,36 @@ form.addEventListener('submit', function (event) {
     // link.href = URL.createObjectURL(blob);
     // link.download = 'receipt.json';
     // link.click();
+    // function sendResumeData(payload) {
+    //     fetch('/api/resume', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(payload),
+    //     })
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             // Handle the response from the backend API
+    //             if (data.resumeUrl) {
+    //                 // If the response includes a resume URL, initiate the download
+    //                 window.location.href = data.resumeUrl;
+    //             } else {
+    //                 // Handle other success cases, such as displaying a success message
+    //                 console.log('Resume generated successfully');
+    //             }
+    //             // Handle the response from the backend API
+    //             // For example, display a success message or download the generated resume
+    //         })
+    //         .catch(error => {
+    //             // Handle any errors that occurred during the API request
+    //             console.error('Error:', error);
+    //         });
+    // }
+
+
+    // sendResumeData(payload);
+
     function sendResumeData(payload) {
         fetch('/api/resume', {
             method: 'POST',
@@ -89,13 +119,14 @@ form.addEventListener('submit', function (event) {
                 // Handle the response from the backend API
                 if (data.resumeUrl) {
                     // If the response includes a resume URL, initiate the download
-                    window.location.href = data.resumeUrl;
+                    const link = document.createElement('a');
+                    link.href = data.resumeUrl;
+                    link.download = 'resume.pdf';
+                    link.click();
                 } else {
                     // Handle other success cases, such as displaying a success message
                     console.log('Resume generated successfully');
                 }
-                // Handle the response from the backend API
-                // For example, display a success message or download the generated resume
             })
             .catch(error => {
                 // Handle any errors that occurred during the API request
@@ -103,8 +134,8 @@ form.addEventListener('submit', function (event) {
             });
     }
 
-
     sendResumeData(payload);
+
 
 
 
