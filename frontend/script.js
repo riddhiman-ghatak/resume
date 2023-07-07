@@ -23,8 +23,10 @@ form.addEventListener('submit', function (event) {
     const companyName = document.getElementById('companyName').value;
     const companyYear = document.getElementById('companyYear').value;
     const companyDescription = document.getElementById('companyDescription').value;
-    const achievementType = document.getElementById('achievementType').value;
-    const achievementDescription = document.getElementById('achievementDescription').value;
+    const achievementType1 = document.getElementById('achievementType1').value;
+    const achievementDescription1 = document.getElementById('achievementDescription1').value;
+    const achievementType2 = document.getElementById('achievementType2').value;
+    const achievementDescription2 = document.getElementById('achievementDescription2').value;
 
     const resume_type = document.getElementById('resumetype').value;//may create problem
 
@@ -59,8 +61,12 @@ form.addEventListener('submit', function (event) {
         ],
         "Achievements": [
             {
-                "Type": achievementType,
-                "Description": achievementDescription
+                "Type": achievementType1,
+                "Description": achievementDescription1
+            },
+            {
+                "Type": achievementType2,
+                "Description": achievementDescription2
             }
         ]
     };

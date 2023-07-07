@@ -18,6 +18,19 @@ function generatePDF(data) {
             .withClientId("37dddd52c7d94d72bf8d08b56b4b35a9")
             .withClientSecret("p8e-J_s77FaxPIUecousUL1euFv8V2MOnDnP")
             .build();
+        // Convert JSON data to a string
+        // const jsonString = JSON.stringify(data, null, 2);
+
+        // // Write JSON string to a file
+        // fs.writeFile('data.json', jsonString, (err) => {
+        //     if (err) {
+        //         console.error('Error writing JSON file:', err);
+        //     } else {
+        //         console.log('JSON file has been created!');
+        //     }
+        // });
+
+        //const JSON_INPUT = require('./data.json');
 
         // Create an ExecutionContext using credentials
         const executionContext = PDFServicesSdk.ExecutionContext.create(credentials);
