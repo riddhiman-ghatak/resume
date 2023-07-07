@@ -6,6 +6,8 @@ const resumeRoutes = require('./routes/resumeRoutes');
 // Middleware
 app.use(bodyParser.json());
 
+app.use(express.static('frontend'));
+
 // Routes
 app.use('/api/resume', resumeRoutes);
 
