@@ -5,6 +5,7 @@ const fs = require('fs');
 
 const OUTPUT = './generatedReceipt.pdf';
 const template = './BasicTemplate.docx';
+const JSON_INPUT = require('./lund.json');
 
 function generatePDF(data) {
     return new Promise((resolve, reject) => {
@@ -24,7 +25,7 @@ function generatePDF(data) {
         // This creates an instance of the Export operation we're using, as well as specifying output type (PDF)
         const documentMerge = PDFServicesSdk.DocumentMerge,
             documentMergeOptions = documentMerge.options,
-            options = new documentMergeOptions.DocumentMergeOptions(data, documentMergeOptions.OutputFormat.PDF);
+            options = new documentMergeOptions.DocumentMergeOptions(JSON_INPUT, documentMergeOptions.OutputFormat.PDF);
 
         // Create a new operation instance using the options instance.
         const documentMergeOperation = documentMerge.Operation.createNew(options);

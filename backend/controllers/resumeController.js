@@ -1,4 +1,4 @@
-const { generatePDF } = require('../generatePDF');
+//const { generatePDF } = require('../generatePDF');
 
 const generateResume = async (req, res) => {
     try {
@@ -6,10 +6,17 @@ const generateResume = async (req, res) => {
         const { data } = req.body;
 
         // Generate the PDF using the generatePDF function
-        await generatePDF(data);
+        //await generatePDF(data);
+
+        // const resumePath = 'C:/Users/riddh/Music/resume/backend/generatedReceipt.pdf';
+
+        //const resumeUrl = `file://${resumePath}`;
+        const resumeUrl = 'http://localhost:3000/generatedReceipt.pdf';
+
 
         // Return the generated resume to the client
-        res.json({ resumeUrl: 'URL_TO_THE_GENERATED_RESUME' });
+        res.json({ resumeUrl });
+        //res.json({ resumeUrl: 'URL_TO_THE_GENERATED_RESUME' });
     } catch (error) {
         // Handle any errors that occurred during the process
         res.status(500).json({ error: 'An error occurred while generating the resume' });
