@@ -1,0 +1,88 @@
+/*
+ * Copyright 2019 Adobe
+ * All Rights Reserved.
+ *
+ * NOTICE: Adobe permits you to use, modify, and distribute this file in
+ * accordance with the terms of the Adobe license agreement accompanying
+ * it. If you have received this file from a source other than Adobe,
+ * then your use, modification, or distribution of it requires the prior
+ * written permission of Adobe.
+ */
+
+const
+	Schema = require('validate'),
+	DefaultConfig = require('../config/dc-services-default-config');
+
+class ServiceTokenCredentials {
+	/**
+	 * @hideconstructor
+	 */
+	constructor(client_id, client_secret, auth_code, ims_token_uri, pdf_serices_uri) {
+		this.clientId = client_id;
+		this.clientSecret = client_secret;
+		this.authCode = auth_code;
+		this.imsUri = ims_token_uri || DefaultConfig.imsTokenUri;
+		this.pdfServicesUri = pdf_serices_uri;
+		this.validate();
+	}
+
+	/**
+	 * Client Id (API Key)
+	 */
+	getClientId() {
+		return this.clientId;
+	}
+
+	/**
+	 * Client Secret
+	 */
+	getClientSecret() {
+		return this.clientSecret;
+	}
+
+	/**
+	 * Auth Code
+	 */
+	getAuthCode() {
+		return this.authCode;
+	}
+
+	getImsUri() {
+		return this.imsUri;
+	}
+
+	getPDFServicesUri() {
+		return this.pdfServicesUri;
+	}
+
+
+	validate(){
+		const ServiceTokenValidator = new Schema({
+			'clientId': {
+				required: true,
+				message: 'client_id must not be blank'
+			},
+			'clientSecret': {
+				required: true,
+				message: 'client_secret must not be blank'
+			},
+			'authCode': {
+				required: true,
+				message: 'auth_code must not be blank'
+			},
+		});
+
+		const config = Object.assign({}, {clientId:this.clientId,clientSecret:this.clientSecret,authCode:this.authCode});
+
+		const errors = ServiceTokenValidator.validate(config);
+		if (errors.length > 0) {
+			const messages = [];
+			errors.forEach(err => messages.push(err.message));
+			throw new Error(messages.join('; '));
+		}
+	}
+
+}
+
+
+module.exports = ServiceTokenCredentials;

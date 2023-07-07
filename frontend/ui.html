@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Receipt Form</title>
+    <style>
+        /* Add some basic styling to the form */
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Receipt Form</h1>
+    <form id="receiptForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="linkedin">LinkedIn:</label>
+        <input type="text" id="linkedin" name="linkedin" required>
+
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" required>
+
+        <label for="summary">Summary:</label>
+        <textarea id="summary" name="summary" rows="4" required></textarea>
+
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" name="skills" required>
+
+        <label for="schoolName">School Name:</label>
+        <input type="text" id="schoolName" name="schoolName" required>
+
+        <label for="schoolYear">School Year:</label>
+        <input type="text" id="schoolYear" name="schoolYear" required>
+
+        <label for="schoolDescription">School Description:</label>
+        <textarea id="schoolDescription" name="schoolDescription" rows="4" required></textarea>
+
+        <label for="collegeName">College Name:</label>
+        <input type="text" id="collegeName" name="collegeName" required>
+
+        <label for="collegeYear">College Year:</label>
+        <input type="text" id="collegeYear" name="collegeYear" required>
+
+        <label for="collegeDescription">College Description:</label>
+        <textarea id="collegeDescription" name="collegeDescription" rows="4" required></textarea>
+
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" name="companyName" required>
+
+        <label for="companyYear">Company Year:</label>
+        <input type="text" id="companyYear" name="companyYear" required>
+
+        <label for="companyDescription">Company Description:</label>
+        <textarea id="companyDescription" name="companyDescription" rows="4" required></textarea>
+
+        <label for="achievementType">Achievement Type:</label>
+        <input type="text" id="achievementType" name="achievementType" required>
+
+        <label for="achievementDescription">Achievement Description:</label>
+        <textarea id="achievementDescription" name="achievementDescription" rows="4" required></textarea>
+
+        <label for="resumetype">Select an appropriate resumetype:</label><br>
+        <select id="resumetype" name="resumetype" required>
+
+            <option value="1">Type 1</option>
+            <option value="2">Type 2</option>
+            <option value="3">Type 3</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
