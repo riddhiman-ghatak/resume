@@ -96,6 +96,9 @@ const template = './BasicTemplate.docx';
 
 function generatePDF(data) {
     return new Promise((resolve, reject) => {
+
+        if (fs.existsSync(OUTPUT)) fs.unlinkSync(OUTPUT);
+
         if (fs.existsSync('./data.json')) {
             fs.unlinkSync('./data.json');
             console.log('Existing data.json file deleted.');
