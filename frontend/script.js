@@ -71,46 +71,16 @@ form.addEventListener('submit', function (event) {
         ]
     };
 
-    // // Convert the data object to JSON string
-    // const jsonData = JSON.stringify(data);
 
-    // // Create a new Blob object with the JSON data
-    // const blob = new Blob([jsonData], { type: 'application/json' });
-
-    // // Create a link element to download the JSON file
-    // const link = document.createElement('a');
-    // link.href = URL.createObjectURL(blob);
-    // link.download = 'receipt.json';
-    // link.click();
-    // function sendResumeData(payload) {
-    //     fetch('/api/resume', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //         },
-    //         body: JSON.stringify(payload),
-    //     })
-    //         .then(response => response.json())
-    //         .then(data => {
-    //             // Handle the response from the backend API
-    //             if (data.resumeUrl) {
-    //                 // If the response includes a resume URL, initiate the download
-    //                 window.location.href = data.resumeUrl;
-    //             } else {
-    //                 // Handle other success cases, such as displaying a success message
-    //                 console.log('Resume generated successfully');
-    //             }
-    //             // Handle the response from the backend API
-    //             // For example, display a success message or download the generated resume
-    //         })
-    //         .catch(error => {
-    //             // Handle any errors that occurred during the API request
-    //             console.error('Error:', error);
-    //         });
-    // }
-
+    //console.log(name);
 
     // sendResumeData(payload);
+    const jsonString = JSON.stringify(payload, null, 2);
+
+    // Print JSON data to the console
+    //console.log(jsonString);
+
+
 
     function sendResumeData(payload) {
         fetch('/api/resume', {
@@ -118,9 +88,16 @@ form.addEventListener('submit', function (event) {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(payload),
+            body: JSON.stringify(payload, null, 2),
         })
-            .then(response => response.json())
+            //.then(response => response.json())
+            .then(response => {
+                // Print the request body
+                console.log('Request Body:', payload);
+
+                // Parse the response as JSON
+                return response.json();
+            })
             .then(data => {
                 // Handle the response from the backend API
                 if (data.resumeUrl) {

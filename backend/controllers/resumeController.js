@@ -61,7 +61,7 @@
 // module.exports = { generateResume };
 
 
-const { generatePDF } = require('../generatePDF');
+//const { generatePDF } = require('../generatePDF');
 const fs = require('fs');
 const path = require('path');
 
@@ -70,13 +70,13 @@ const generateResume = async (req, res) => {
         // Retrieve data and template selection from the request body
         const { data } = req.body;
 
-        //const jsonString = JSON.stringify(data, null, 2);
+        const jsonString = JSON.stringify(data, null, 2);
 
         // Print JSON data to the console
-        //console.log(jsonString);
+        console.log(jsonString);
 
         // Generate the PDF using the generatePDF function
-        await generatePDF(data);
+        //await generatePDF(data);
 
         const resumePath = 'C:/Users/riddh/Music/resume/backend/generatedReceipt.pdf';
 

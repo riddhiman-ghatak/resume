@@ -21,10 +21,19 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const resumeRoutes = require('./routes/resumeRoutes');
+const cors = require('cors');
 //const path = require('path');
 
+const corsOptions = {
+    origin: 'http://127.0.0.1:5500',
+    optionsSuccessStatus: 200
+};
+
+app.use(express.json());
+
 // Middleware
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(cors(corsOptions));
 
 app.use(express.static('C:/Users/riddh/Music/resume/frontend'));
 
@@ -43,5 +52,11 @@ app.get('/', (req, res) => {
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
+});
+
+// Add a console.log to check the payload data
+app.post('/api/resume', (req, res) => {
+    const resumeData = req.body;
+    console.log(resumeData);
 });
 
