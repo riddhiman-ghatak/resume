@@ -5,7 +5,7 @@ const fs = require('fs');
 
 const OUTPUT = './generatedReceipt.pdf';
 const template = './BasicTemplate.docx';
-const JSON_INPUT = require('./lund.json');
+const JSON_INPUT = require('./data.json');
 
 function generatePDF(data) {
     return new Promise((resolve, reject) => {
