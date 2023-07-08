@@ -8,17 +8,7 @@ const generateResume = async (req, res) => {
         const data = req.body;
         console.log(data);
 
-        // // Convert JSON data to a string
-        //const jsonString = JSON.stringify(data, null, 2);
 
-        // // Write JSON string to a file
-        // fs.writeFile('data.json', jsonString, (err) => {
-        //     if (err) {
-        //         console.error('Error writing JSON file:', err);
-        //     } else {
-        //         console.log('JSON file has been created!');
-        //     }
-        // });
 
 
 

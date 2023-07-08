@@ -1,11 +1,11 @@
 {
-  "Name": "Riddhiman",
+  "Name": "riddhiman",
   "LastName": "Ghatak",
   "EmailAddress": "riddhimanghatak@gmail.com",
   "PhoneNumber": "6290995330",
   "LinkedIn": "https://www.linkedin.com/in/riddhiman-ghatak-210304260/",
   "JobTitle": "software dev",
-  "Summary": "I am interested in SDE, ML",
+  "Summary": "abcd",
   "Skills": [
     "c++",
     "python",
@@ -16,29 +16,29 @@
     {
       "SchoolName": "central model",
       "Year": "2018",
-      "Description": "Higher secondary"
+      "Description": "abcd"
     },
     {
       "SchoolName": "IIT Guwahati",
       "Year": "pre final year",
-      "Description": "engineering college"
+      "Description": "abcd"
     }
   ],
   "Experience": [
     {
       "CompanyName": "adobe",
       "Year": "2023",
-      "Description": "work on pdf and photo editing softwares"
+      "Description": "abcd"
     }
   ],
   "Achievements": [
     {
       "Type": "coding",
-      "Description": "encode finalist"
+      "Description": "abcd"
     },
     {
-      "Type": "sports",
-      "Description": "badminton district champion"
+      "Type": "soprt",
+      "Description": "abcd"
     }
   ]
 }
