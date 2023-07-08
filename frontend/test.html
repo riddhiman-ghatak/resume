@@ -51,7 +51,7 @@
 
         .carousel-container {
             margin-bottom: 20px;
-            width: 100%;
+            width: 50%;
             height: 50vh;
             overflow: hidden;
             position: relative;
@@ -85,18 +85,6 @@
 
         .carousel-slide.active img {
             transform: translateX(0);
-        }
-
-        .carousel-caption {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px 20px;
-            border-radius: 5px;
-            color: #fff;
-            font-size: 20px;
         }
 
         /* Add additional styles */
@@ -139,16 +127,13 @@
 
     <div class="carousel-container">
         <div class="carousel-slide active">
-            <img src="./images/image1f.jpg" alt="Image 1">
-            <div class="carousel-caption">Type 1</div>
+            <img src="./images/image1.jpg" alt="Image 1">
         </div>
         <div class="carousel-slide">
-            <img src="./images/image2f.jpg" alt="Image 2">
-            <div class="carousel-caption">Type 2</div>
+            <img src="./images/image2.jpg" alt="Image 2">
         </div>
         <div class="carousel-slide">
-            <img src="./images/image3f.jpg" alt="Image 3">
-            <div class="carousel-caption">Type 3</div>
+            <img src="./images/image3.jpg" alt="Image 3">
         </div>
     </div>
 
@@ -160,6 +145,9 @@
                 <option value="2">Type 2</option>
                 <option value="3">Type 3</option>
             </select>
+
+            <br><br>
+
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -224,8 +212,7 @@
             <textarea id="achievementDescription2" name="achievementDescription2" rows="4" required></textarea>
 
 
-
-
+            <!-- Rest of the form fields -->
 
             <br><br>
 
@@ -245,7 +232,6 @@
         }, 5000);
     </script>
     <script src="script.js"></script>
-
 </body>
 
 </html>

@@ -1,43 +1,44 @@
 {
-  "Name": "riddhiman",
+  "Name": "Riddhiman",
   "LastName": "Ghatak",
   "EmailAddress": "riddhimanghatak@gmail.com",
   "PhoneNumber": "6290995330",
   "LinkedIn": "https://www.linkedin.com/in/riddhiman-ghatak-210304260/",
-  "JobTitle": "sde",
-  "Summary": "I want to work",
+  "JobTitle": "software dev",
+  "Summary": "I am interested in SDE, ML",
   "Skills": [
-    "react",
-    " python",
-    " tensorflow "
+    "c++",
+    "python",
+    " javascript",
+    " react js"
   ],
   "Education": [
     {
       "SchoolName": "central model",
       "Year": "2018",
-      "Description": "in barrackpore in kolkata"
+      "Description": "Higher secondary"
     },
     {
-      "SchoolName": "IIT G",
-      "Year": "2021",
-      "Description": "in guwahati, nirf 7"
+      "SchoolName": "IIT Guwahati",
+      "Year": "pre final year",
+      "Description": "engineering college"
     }
   ],
   "Experience": [
     {
       "CompanyName": "adobe",
       "Year": "2023",
-      "Description": "best company"
+      "Description": "work on pdf and photo editing softwares"
     }
   ],
   "Achievements": [
     {
-      "Type": "ML",
-      "Description": "encode winner"
+      "Type": "coding",
+      "Description": "encode finalist"
     },
     {
       "Type": "sports",
-      "Description": "badminton"
+      "Description": "badminton district champion"
     }
   ]
 }
