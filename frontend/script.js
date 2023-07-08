@@ -82,8 +82,44 @@ form.addEventListener('submit', function (event) {
 
 
 
+    // function sendResumeData(payload) {
+    //     fetch('/api/resume', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(payload, null, 2),
+    //     })
+    //         //.then(response => response.json())
+    //         .then(response => {
+    //             // Print the request body
+    //             console.log('Request Body:', payload);
+
+    //             // Parse the response as JSON
+    //             return response.json();
+    //         })
+    //         .then(data => {
+    //             // Handle the response from the backend API
+    //             if (data.resumeUrl) {
+    //                 // If the response includes a resume URL, initiate the download
+    //                 const link = document.createElement('a');
+    //                 link.href = data.resumeUrl;
+    //                 link.download = 'resume.pdf';
+    //                 link.click();
+    //             } else {
+    //                 // Handle other success cases, such as displaying a success message
+    //                 console.log('Resume generated successfully');
+    //             }
+    //         })
+    //         .catch(error => {
+    //             // Handle any errors that occurred during the API request
+    //             console.error('Error:', error);
+    //         });
+    // }
+
+    // sendResumeData(payload);
     function sendResumeData(payload) {
-        fetch('/api/resume', {
+        fetch('http://localhost:3000/api/resume', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -118,6 +154,9 @@ form.addEventListener('submit', function (event) {
     }
 
     sendResumeData(payload);
+
+
+
 
 
 

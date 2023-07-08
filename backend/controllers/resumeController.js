@@ -68,12 +68,22 @@ const path = require('path');
 const generateResume = async (req, res) => {
     try {
         // Retrieve data and template selection from the request body
-        const { data } = req.body;
+        const data = req.body;
+        console.log(data);
 
+        // // Convert JSON data to a string
         const jsonString = JSON.stringify(data, null, 2);
 
-        // Print JSON data to the console
-        console.log(jsonString);
+        // // Write JSON string to a file
+        // fs.writeFile('data.json', jsonString, (err) => {
+        //     if (err) {
+        //         console.error('Error writing JSON file:', err);
+        //     } else {
+        //         console.log('JSON file has been created!');
+        //     }
+        // });
+
+
 
         // Generate the PDF using the generatePDF function
         //await generatePDF(data);

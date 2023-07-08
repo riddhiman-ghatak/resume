@@ -37,10 +37,10 @@ app.use(cors(corsOptions));
 
 app.use(express.static('C:/Users/riddh/Music/resume/frontend'));
 
-// Serve static files from the "frontend" folder
-app.use(express.static('frontend'));
+// // Serve static files from the "frontend" folder
+// app.use(express.static('frontend'));
 
-// Routes
+// // Routes
 app.use('/api/resume', resumeRoutes);
 
 // Handle root path - Serve index.html from the "frontend" folder
@@ -55,8 +55,7 @@ app.listen(port, () => {
 });
 
 // Add a console.log to check the payload data
-app.post('/api/resume', (req, res) => {
-    const resumeData = req.body;
-    console.log(resumeData);
-});
-
+// app.post('/api/resume', (req, res) => {
+//     const resumeData = req.body;
+//     console.log(resumeData);
+// });
