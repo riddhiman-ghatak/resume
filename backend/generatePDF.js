@@ -19,7 +19,7 @@ function generatePDF(data) {
             .withClientSecret("p8e-J_s77FaxPIUecousUL1euFv8V2MOnDnP")
             .build();
         // Convert JSON data to a string
-        // const jsonString = JSON.stringify(data, null, 2);
+        const jsonString = JSON.stringify(data, null, 2);
 
         // // Write JSON string to a file
         // fs.writeFile('data.json', jsonString, (err) => {
