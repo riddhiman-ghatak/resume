@@ -1,41 +1,43 @@
 {
-  "Name": "Riddhiman",
+  "Name": "riddhiman",
   "LastName": "Ghatak",
   "EmailAddress": "riddhimanghatak@gmail.com",
-  "PhoneNumber": "+916290995330",
-  "LinkedIn": "nkedin.com/in/riddhiman-ghatak-210304260/",
-  "JobTitle": "ass",
-  "Summary": "as",
+  "PhoneNumber": "6290995330",
+  "LinkedIn": "https://www.linkedin.com/in/riddhiman-ghatak-210304260/",
+  "JobTitle": "sde",
+  "Summary": "I want to work",
   "Skills": [
-    "ass"
+    "react",
+    " python",
+    " tensorflow "
   ],
   "Education": [
     {
-      "SchoolName": "ass",
-      "Year": "233",
-      "Description": "ass"
+      "SchoolName": "central model",
+      "Year": "2018",
+      "Description": "in barrackpore in kolkata"
     },
     {
-      "SchoolName": "ASS",
-      "Year": "125",
-      "Description": "ass"
+      "SchoolName": "IIT G",
+      "Year": "2021",
+      "Description": "in guwahati, nirf 7"
     }
   ],
   "Experience": [
     {
-      "CompanyName": "ass",
-      "Year": "452",
-      "Description": "aws"
+      "CompanyName": "adobe",
+      "Year": "2023",
+      "Description": "best company"
     }
   ],
   "Achievements": [
     {
-      "Type": "ass",
-      "Description": "ass"
+      "Type": "ML",
+      "Description": "encode winner"
     },
     {
-      "Type": "aws",
-      "Description": "aws"
+      "Type": "sports",
+      "Description": "badminton"
     }
   ]
 }

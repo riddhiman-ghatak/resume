@@ -35,7 +35,7 @@ app.use(express.json());
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(cors(corsOptions));
 
-app.use(express.static('C:/Users/riddh/Music/resume/frontend'));
+app.use(express.static('../frontend'));
 
 // // Serve static files from the "frontend" folder
 // app.use(express.static('frontend'));
@@ -45,7 +45,7 @@ app.use('/api/resume', resumeRoutes);
 
 // Handle root path - Serve index.html from the "frontend" folder
 app.get('/', (req, res) => {
-    res.sendFile('C:/Users/riddh/Music/resume/frontend/index.html');
+    res.sendFile('../frontend/index.html');
 });
 
 // Start the server

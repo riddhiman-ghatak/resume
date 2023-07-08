@@ -25,7 +25,7 @@ const generateResume = async (req, res) => {
         // Generate the PDF using the generatePDF function
         await generatePDF(data);
 
-        const resumePath = 'C:/Users/riddh/Music/resume/backend/generatedReceipt.pdf';
+        const resumePath = '../backend/generatedReceipt.pdf';
 
         // Read the generated PDF file
         const file = fs.readFileSync(resumePath);
