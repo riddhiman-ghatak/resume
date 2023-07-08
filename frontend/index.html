@@ -25,11 +25,54 @@
             border: none;
             cursor: pointer;
         }
+
+        /* Add custom styles for the form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .carousel-container {
+            margin-bottom: 20px;
+        }
+
+        .carousel-slide {
+            display: none;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-    <h1>Receipt Form</h1>
+    <h1>Make Your Resume</h1>
+
+    <!-- Add image carousel -->
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <img src="image1.jpg" alt="Image 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="image2.jpg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+    </div>
+
     <form id="receiptForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -94,18 +137,43 @@
         <label for="achievementDescription2">Achievement Description:</label>
         <textarea id="achievementDescription2" name="achievementDescription2" rows="4" required></textarea>
 
-        <label for="resumetype">Select an appropriate resumetype:</label><br>
-        <select id="resumetype" name="resumetype" required>
+        <div>
+            <label for="resumetype">Select an appropriate resume type:</label><br>
+            <select id="resumetype" name="resumetype" required>
+                <option value="1">Type 1</option>
+                <option value="2">Type 2</option>
+                <option value="3">Type 3</option>
+            </select>
+        </div>
 
-            <option value="1">Type 1</option>
-            <option value="2">Type 2</option>
-            <option value="3">Type 3</option>
-        </select>
         <br><br>
 
         <input type="submit" value="Submit">
     </form>
 
+
+    <script>
+        // Image carousel script
+        const carouselSlides = document.querySelectorAll('.carousel-slide');
+        let slideIndex = 0;
+
+        function showSlide(n) {
+            for (let i = 0; i < carouselSlides.length; i++) {
+                carouselSlides[i].classList.remove('active');
+            }
+            carouselSlides[n].classList.add('active');
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex >= carouselSlides.length) {
+                slideIndex = 0;
+            }
+            showSlide(slideIndex);
+        }
+
+        setInterval(nextSlide, 3000);
+    </script>
     <script src="script.js"></script>
 </body>
 
