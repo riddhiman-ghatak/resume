@@ -68,10 +68,11 @@ After starting the server open your browser and paste the link below
 http://localhost:3000/
 ```
 
-Now fill the form , and **click** the **submit** button and wait for 20 sec. The pdf will be downloaded.
+Now fill the form , and **click** the **submit** button and wait for 30 sec. The pdf will be downloaded.
 
 
 
+![Screenshot (46)](https://github.com/riddhiman-ghatak/resume/assets/109431506/d2abd019-dc3e-48ec-81b3-efad7436ae51)
 
 
 
