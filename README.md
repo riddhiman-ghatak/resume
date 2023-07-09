@@ -62,7 +62,7 @@ Now we have to start the server by the command below
 ```shell
 node server.js
 ```
-After starting the server open your browser and pest the link below
+After starting the server open your browser and paste the link below
 
 ```shell
 http://localhost:3000/
