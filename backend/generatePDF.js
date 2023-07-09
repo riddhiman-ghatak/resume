@@ -14,8 +14,10 @@ const OUTPUT = './generatedReceipt.pdf';
 
 function generatePDF(data) {
     return new Promise((resolve, reject) => {
+        //if pdf is already there in the directory remove it.
         if (fs.existsSync(OUTPUT)) fs.unlinkSync(OUTPUT);
 
+        //if data.json is already there in the directory remove it.
         if (fs.existsSync('./data.json')) {
             fs.unlinkSync('./data.json');
             console.log('Existing data.json file deleted.');
@@ -36,7 +38,8 @@ function generatePDF(data) {
             const jsonString = JSON.stringify(dataWithoutResumeType, null, 2);
 
             try {
-                await writeFileAsync('data.json', jsonString);
+
+                await writeFileAsync('data.json', jsonString);// now let's make data.json file according to user input.
                 console.log('JSON file has been created!');
             } catch (err) {
                 console.error('Error writing JSON file:', err);
@@ -61,7 +64,7 @@ function generatePDF(data) {
 
                 let template = './BasicTemplate1.docx'; // Default template
 
-                if (data.resume_type === "2") {
+                if (data.resume_type === "2") {             //select the template according to user input.
                     template = './BasicTemplate2.docx';
                 } else if (data.resume_type === "3") {
                     template = './BasicTemplate3.docx';
